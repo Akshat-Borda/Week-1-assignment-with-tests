@@ -9,7 +9,30 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
-  return [];
+  let y;
+  var t=[];
+  var c={};
+    
+    for(let i=0;i<transactions.length;i++){
+      t=transactions[i];
+      if(c[t.catagory]){
+          c[t.catagory]+=t.price;
+      
+        }else{
+          c[t.catagory]=t.price;
+          
+        }
+    }
+  return c;
 }
-
+let x =[
+  {itemname:'cap', catagory:'clothes', price: 200, timestamp: 12343},
+  {itemname:'shoes', catagory:'clothes', price: 500, timestamp: 2343},
+  {itemname:'bat', catagory:'sports', price: 300, timestamp: 1243},
+  {itemname:'chips', catagory:'food', price: 50, timestamp: 1234},
+  {itemname:'soda', catagory:'food', price: 20, timestamp: 1343},
+  {itemname:'ball', catagory:'sports', price: 80, timestamp: 1534}
+];
+console.log(calculateTotalSpentByCategory(x));
+//calculateTotalSpentByCategory(x);
 module.exports = calculateTotalSpentByCategory;
