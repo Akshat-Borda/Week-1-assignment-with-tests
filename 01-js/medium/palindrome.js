@@ -7,7 +7,20 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  str=str.replace(/[^\w\s]|_/g, "");
+  str=str.toLowerCase();
+  if(parseInt(str.length/2)==0){
+    return true;
+  }else{
+  for(var i=0;i<parseInt(str.length/2);i++){
+    if(str.charAt(i)==str.charAt(parseInt(str.length)-i-1)){
+      return true;
+    }else{
+      return false;
+      }
+    }
+  }
 }
 
 module.exports = isPalindrome;
+//console.log(isPalindrome("abccba"));
