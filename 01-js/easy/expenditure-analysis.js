@@ -22,7 +22,7 @@ function calculateTotalSpentByCategory(transactions) {
           
         }
     }
-    //console.log("hi");
+    
     var keys=Object.keys(c);
     var result=[];
     for(var i=0;i<keys.length;i++){
@@ -32,14 +32,4 @@ function calculateTotalSpentByCategory(transactions) {
     }
   return result;
 }
-// let x =[
-//   {itemname:'cap', category:'clothes', price: 200, timestamp: 12343},
-//   {itemname:'shoes', category:'clothes', price: 500, timestamp: 2343},
-//   {itemname:'bat', category:'sports', price: 300, timestamp: 1243},
-//   {itemname:'chips', category:'food', price: 50, timestamp: 1234},
-//   {itemname:'soda', category:'food', price: 20, timestamp: 1343},
-//   {itemname:'ball', category:'sports', price: 80, timestamp: 1534}
-// ];
-// console.log(calculateTotalSpentByCategory(x));
-//calculateTotalSpentByCategory(x);
 module.exports = calculateTotalSpentByCategory;
